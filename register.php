@@ -1,48 +1,22 @@
-<?php 
-include 'config.php';
-$errors="";
-if (isset($_POST['valider']))
+<?PHP
+include "../entities/client.php";
+include "../core/compteC.php";
+
+if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['telephone']) and isset($_POST['email']) and isset($_POST['mdp']))
 {
-    $nom=$_POST['nom'];
-    $prenom=$_POST['prenom'];
-    $telephone=$_POST['telephone'];
-    $email=$_POST['email'];
-    $pass=$_POST['password'];
-    $pass2=$_POST['passwordCNF'];
+$client1=new client($_POST['nom'],$_POST['prenom'],$_POST['telephone'],$_POST['email'],$_POST['mdp']);
+$client1C=new clientC();
+$client1C->ajouterclient($client1);
 
-        
-
-
-    if ($pass!=$pass2)
-    {
-        $errors= $errors . "mot de passe non identiques";
-    }
-    else{
-        $stmt=$bdd->prepare("SELECT email FROM client");
-        $stmt->execute();
-
-        while ($data= $stmt->fetch()){
-            if ($email==$data['email'])
-            {
-                $errors= $errors . "email existant";
-            }
-            
-        }
-
-     
-    }
-
-    if ($errors!="")
-    {
-        echo $errors;
-    }
-    else{
-        $stmt= $bdd->prepare("INSERT INTO client(nom,prenom,telephone,email,mdp) VALUES(?,?,?,?,?)");
-        $stmt->execute([$nom,$prenom,$telephone,$email,$pass]);
-    }
+	
 }
-
-
+if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['adr']) and isset($_POST['postal']) and isset($_POST['city'])){
+    $adresse1=new adresse($_POST['nom'],$_POST['prenom'],$_POST['adr'],$_POST['postal'],$_POST['city']);
+    $adresse1C=new adresseC();
+$adresse1C->ajouteradresse($adresse1);
+header('Location: register.php');
+	
+}
 ?>
 <!doctype html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
@@ -63,7 +37,7 @@ if (isset($_POST['valider']))
     <title>Create Account | Wheels &amp; Tyres</title>
     
 
-    <link rel="canonical" href="register.html" />
+    <link rel="canonical" href="register.php" />
   	<link href="http://cdn.shopify.com/s/files/1/0508/6409/t/2/assets/favicon.ico?0" rel="shortcut icon" type="image/x-icon" />
     <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/5086409/digital_wallets/dialog">
 <script id="shopify-features" type="application/json">{"accessToken":"a1f9d818538fd877d4c32bc79ff1e2f5","betas":[],"domain":"tm-shopify048-wheels.myshopify.com","predictiveSearch":true,"shopId":5086409,"smart_payment_buttons_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/spb.en.js","dynamic_checkout_cart_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js"}</script>
@@ -329,11 +303,11 @@ for (var attr in meta) {
 
 <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
 
-    <link href="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/bootstrapcfcd.css?0" rel="stylesheet" type="text/css" media="all" /> 
-    <link href="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/assetscfcd.css?0" rel="stylesheet" type="text/css" media="all" /> 
-    <link href="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/stylecfcd.css?0" rel="stylesheet" type="text/css" media="all" />
-    <link href="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/responsivecfcd.css?0" rel="stylesheet" type="text/css" media="all" />
-    <link href="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/font-awesomecfcd.css?0" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/bootstrapcfcd.css?0" rel="stylesheet" type="text/css" media="all" /> 
+    <link href="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/assetscfcd.css?0" rel="stylesheet" type="text/css" media="all" /> 
+    <link href="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/stylecfcd.css?0" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/responsivecfcd.css?0" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/font-awesomecfcd.css?0" rel="stylesheet" type="text/css" media="all" />
 
 	
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,600,600italic,800italic' rel='stylesheet' type='text/css'>
@@ -352,33 +326,33 @@ for (var attr in meta) {
     <![endif]-->
 
     
-    <script src="../../cdn.shopify.com/s/assets/themes_support/shopify_common-8ea6ac3faf357236a97f5de749df4da6e8436ca107bc3a4ee805cbf08bc47392.js" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/assets/themes_support/customer_area-4beccea87758d91106a581ba89341d9b51842f6da79209258c8297239e950343.js" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/assets/themes_support/shopify_common-8ea6ac3faf357236a97f5de749df4da6e8436ca107bc3a4ee805cbf08bc47392.js" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/assets/themes_support/customer_area-4beccea87758d91106a581ba89341d9b51842f6da79209258c8297239e950343.js" type="text/javascript"></script>
     
 
-    <script src="../../cdn.shopify.com/s/assets/themes_support/option_selection-fe6b72c2bbdd3369ac0bfefe8648e3c889efca213baefd4cfb0dd9363563831f.js" type="text/javascript"></script>
-    <script src="../../ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>  
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/bootstrap.mincfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery-migrate-1.2.1.mincfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.mobile.customized.mincfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/shopcfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.easing.1.3cfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/api.jquerycfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/ajaxify-shopcfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/hoverIntentcfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/superfishcfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/supersubscfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.mobilemenucfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/sftouchscreencfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.fancybox-1.3.4cfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.bxslider.mincfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.nivoslidercfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.customSelect.mincfcd.js?0" type="text/javascript"></script>
-  	<script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/tm-stick-upcfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/assets/themes_support/option_selection-fe6b72c2bbdd3369ac0bfefe8648e3c889efca213baefd4cfb0dd9363563831f.js" type="text/javascript"></script>
+    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>  
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/bootstrap.mincfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery-migrate-1.2.1.mincfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.mobile.customized.mincfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/shopcfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.easing.1.3cfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/api.jquerycfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/ajaxify-shopcfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/hoverIntentcfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/superfishcfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/supersubscfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.mobilemenucfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/sftouchscreencfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.fancybox-1.3.4cfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.bxslider.mincfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.nivoslidercfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.customSelect.mincfcd.js?0" type="text/javascript"></script>
+  	<script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/tm-stick-upcfcd.js?0" type="text/javascript"></script>
     
 
-<script src="../services/javascripts/currencies.js" type="text/javascript"></script>
-<script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.currencies.mincfcd.js?0" type="text/javascript"></script>
+<script src="../../services/javascripts/currencies.js" type="text/javascript"></script>
+<script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.currencies.mincfcd.js?0" type="text/javascript"></script>
 
 <script>
 
@@ -690,11 +664,24 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
                   <label for="email" class="login control-label col-sm-4">Email Address</label>
                   <div class="col-sm-4"><input type="email" value="" name="email" id="email" class="form-control" size="30" /></div>
                 </div>
+                <div id="adr" class="clearfix form-group">
+                  <label for="adresse" class="login control-label col-sm-4">Address</label>
+                  <div class="col-sm-4"><input type="text" value="" name="adr" id="adress" class="form-control" size="30" /></div>
+                </div>
+                <div id="postal" class="clearfix form-group">
+                  <label for="postal" class="login control-label col-sm-4">Postal code</label>
+                  <div class="col-sm-4"><input type="text" value="" name="postal" id="postal" class="form-control" size="30" /></div>
+                </div>
+                <div id="city" class="clearfix form-group">
+                  <label for="city" class="login control-label col-sm-4">City</label>
+                  <div class="col-sm-4"><select name="city"> <option>Tunis</option><option>Sousse</option><option>Kairouan</option><option>Sfax</option><option>Hammamet</option><option>Bizerte</option>
+                    <option>Monastir</option><option>Gabes</option><option>Tozeur</option></select></div>
+                </div>
                
         
                 <div id="password" class="clearfix form-group">
                   <label for="password" class="login control-label col-sm-4">Password</label>
-                  <div class="col-sm-4"><input type="password" value="" name="password" id="password" class="form-control password" size="30" /></div>
+                  <div class="col-sm-4"><input type="password" value="" name="mdp" id="password" class="form-control password" size="30" /></div>
                 </div>
                 <div id="password" class="clearfix form-group">
                     <label for="password" class="login control-label col-sm-4">Confirm Password</label>

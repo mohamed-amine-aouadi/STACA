@@ -1,5 +1,6 @@
 <?php 
-include 'config.php';
+include '../config.php';
+session_start();
 $errors="";
 if (isset($_POST['connecter']))
 {
@@ -12,7 +13,13 @@ if (isset($_POST['connecter']))
     
     if ($userCheck==1)
     {
-      header('location:register.php');
+      $client_info=$stmt->fetch();
+      $_SESSION['nom']=$client_info['nom'];
+      $_SESSION['prenom']=$client_info['prenom'];
+      $_SESSION['telephone']=$client_info['telephone'];
+      $_SESSION['email']=$client_info['email'];
+      $_SESSION['mdp']=$client_info['mdp'];
+      header('location:../index.php?email='.$_SESSION['email']);
       exit();
     }
     else {
@@ -307,11 +314,11 @@ for (var attr in meta) {
 
 <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
 
-    <link href="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/bootstrapcfcd.css?0" rel="stylesheet" type="text/css" media="all" /> 
-    <link href="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/assetscfcd.css?0" rel="stylesheet" type="text/css" media="all" /> 
-    <link href="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/stylecfcd.css?0" rel="stylesheet" type="text/css" media="all" />
-    <link href="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/responsivecfcd.css?0" rel="stylesheet" type="text/css" media="all" />
-    <link href="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/font-awesomecfcd.css?0" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/bootstrapcfcd.css?0" rel="stylesheet" type="text/css" media="all" /> 
+    <link href="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/assetscfcd.css?0" rel="stylesheet" type="text/css" media="all" /> 
+    <link href="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/stylecfcd.css?0" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/responsivecfcd.css?0" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/font-awesomecfcd.css?0" rel="stylesheet" type="text/css" media="all" />
 
 	
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,600,600italic,800italic' rel='stylesheet' type='text/css'>
@@ -330,33 +337,33 @@ for (var attr in meta) {
     <![endif]-->
 
     
-    <script src="../../cdn.shopify.com/s/assets/themes_support/shopify_common-8ea6ac3faf357236a97f5de749df4da6e8436ca107bc3a4ee805cbf08bc47392.js" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/assets/themes_support/customer_area-4beccea87758d91106a581ba89341d9b51842f6da79209258c8297239e950343.js" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/assets/themes_support/shopify_common-8ea6ac3faf357236a97f5de749df4da6e8436ca107bc3a4ee805cbf08bc47392.js" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/assets/themes_support/customer_area-4beccea87758d91106a581ba89341d9b51842f6da79209258c8297239e950343.js" type="text/javascript"></script>
     
 
-    <script src="../../cdn.shopify.com/s/assets/themes_support/option_selection-fe6b72c2bbdd3369ac0bfefe8648e3c889efca213baefd4cfb0dd9363563831f.js" type="text/javascript"></script>
-    <script src="../../ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>  
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/bootstrap.mincfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery-migrate-1.2.1.mincfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.mobile.customized.mincfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/shopcfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.easing.1.3cfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/api.jquerycfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/ajaxify-shopcfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/hoverIntentcfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/superfishcfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/supersubscfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.mobilemenucfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/sftouchscreencfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.fancybox-1.3.4cfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.bxslider.mincfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.nivoslidercfcd.js?0" type="text/javascript"></script>
-    <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.customSelect.mincfcd.js?0" type="text/javascript"></script>
-  	<script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/tm-stick-upcfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/assets/themes_support/option_selection-fe6b72c2bbdd3369ac0bfefe8648e3c889efca213baefd4cfb0dd9363563831f.js" type="text/javascript"></script>
+    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>  
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/bootstrap.mincfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery-migrate-1.2.1.mincfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.mobile.customized.mincfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/shopcfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.easing.1.3cfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/api.jquerycfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/ajaxify-shopcfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/hoverIntentcfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/superfishcfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/supersubscfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.mobilemenucfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/sftouchscreencfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.fancybox-1.3.4cfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.bxslider.mincfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.nivoslidercfcd.js?0" type="text/javascript"></script>
+    <script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.customSelect.mincfcd.js?0" type="text/javascript"></script>
+  	<script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/tm-stick-upcfcd.js?0" type="text/javascript"></script>
     
 
-<script src="../services/javascripts/currencies.js" type="text/javascript"></script>
-<script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.currencies.mincfcd.js?0" type="text/javascript"></script>
+<script src="../../services/javascripts/currencies.js" type="text/javascript"></script>
+<script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.currencies.mincfcd.js?0" type="text/javascript"></script>
 
 <script>
 
@@ -448,9 +455,9 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
             <!-- USER MENU -->
             <ul class="header_user">
             
-                <li><a href="login.html" id="customer_login_link">Log in</a></li>
+                <li><a href="login.php" id="customer_login_link">Log in</a></li>
                 
-                <li><a href="register.html" id="customer_register_link">Create an account</a></li>
+                <li><a href="register.php" id="customer_register_link">Create an account</a></li>
                 
             
             <li class="checkout"><a href="../cart.html">Check out</a></li>
