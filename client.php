@@ -1,95 +1,55 @@
 <?PHP
 class client{
+	private $id;
 	private $nom;
 	private $prenom;
 	private $telephone;
 	private $email;
 	private $mdp;
-	function __construct($nom,$prenom,$telephone,$email,$mdp){
+	function __construct($id,$nom,$prenom,$telephone,$email,$mdp){
+		$this->id=$id;
 		$this->nom=$nom;
 		$this->prenom=$prenom;
 		$this->telephone=$telephone;
 		$this->email=$email;
 		$this->mdp=$mdp;
 	}
-	function getnom(){
+	function getId(){
+		return $this->id;
+	}
+	function getNom(){
 		return $this->nom;
 	}
-	function getprenom(){
+	function getPrenom(){
 		return $this->prenom;
 	}
-	function gettelephone(){
+	function getTelephone(){
 		return $this->telephone;
 	}
-	function getemail(){
+	function getEmail(){
 		return $this->email;
 	}
-	function getmdp(){
+	function getMdp(){
 		return $this->mdp;
 	}
-
-	function setnom($nom){
+	function setId($id){
+		$this->id=$id;
+	}
+	function setNom($nom){
 		$this->nom=$nom;
 	}
-	function setprenom($prenom){
+	function setPrenom($prenom){
 		$this->prenom=$prenom;
 	}
-	function settelephone($telephone){
+	function setTelephone($telephone){
 		$this->telephone=$telephone;
 	}
-	function setemail($email){
+	function setEmail($email){
 		$this->email=$email;
 	}
-	function setmdp($mdp){
+	function setMdp($mdp){
 		$this->mdp=$mdp;
 	}
 	
 }
-class adresse{
-	private $nom;
-	private $prenom;
-	private $adr;
-	private $postal;
-	private $city;
-	function __construct($nom,$prenom,$adr,$postal,$city){
-		$this->nom=$nom;
-		$this->prenom=$prenom;
-		$this->adr=$adr;
-		$this->postal=$postal;
-		$this->city=$city;
-	}
-	function getnom(){
-		return $this->nom;
-	}
-	function getprenom(){
-		return $this->prenom;
-	}
-	function getadr(){
-		return $this->adr;
-	}
-	function getpostal(){
-		return $this->postal;
-	}
-	function getcity(){
-		return $this->city;
-	}
-
-	function setnom($nom){
-		$this->nom=$nom;
-	}
-	function setprenom($prenom){
-		$this->prenom=$prenom;
-	}
-	function setadr($adr){
-		$this->adr=$adr;
-	}
-	function setpostal($postal){
-		$this->postal=$postal;
-	}
-	function setcity($city){
-		$this->city=$city;
-	}
-	
-}
-
 ?>

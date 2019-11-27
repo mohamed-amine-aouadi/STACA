@@ -1,4 +1,6 @@
-
+<?php 
+session_start();
+?>
 <!doctype html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -6,7 +8,7 @@
 <!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->  
 
-<!-- Mirrored from tm-shopify048-wheels.myshopify.com/account/login by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2019 22:14:43 GMT -->
+<!-- Mirrored from tm-shopify048-wheels.myshopify.com/account/register by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2019 22:14:44 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8">
@@ -15,10 +17,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
     
-    <title>Account | Wheels &amp; Tyres</title>
+    <title>Create Account | Wheels &amp; Tyres</title>
     
 
-    <link rel="canonical" href="login.php" />
+    <link rel="canonical" href="register.php" />
   	<link href="http://cdn.shopify.com/s/files/1/0508/6409/t/2/assets/favicon.ico?0" rel="shortcut icon" type="image/x-icon" />
     <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/5086409/digital_wallets/dialog">
 <script id="shopify-features" type="application/json">{"accessToken":"a1f9d818538fd877d4c32bc79ff1e2f5","betas":[],"domain":"tm-shopify048-wheels.myshopify.com","predictiveSearch":true,"shopId":5086409,"smart_payment_buttons_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/spb.en.js","dynamic_checkout_cart_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js"}</script>
@@ -30,7 +32,7 @@ Shopify.theme.handle = "null";
 Shopify.theme.style = {"id":null,"handle":null};</script>
 <script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
 <script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadJS=n(),t.detectLoadJS=n()}(window);</script>
-<script id="__st">var __st={"a":5086409,"offset":-18000,"reqid":"48a1b32c-87b9-47ef-9357-fc8190f2b8b3","pageurl":"tm-shopify048-wheels.myshopify.com\/account\/login","u":"102d51256dc2"};</script>
+<script id="__st">var __st={"a":5086409,"offset":-18000,"reqid":"5ec6a309-9419-492c-a27b-f38f9c8021d1","pageurl":"tm-shopify048-wheels.myshopify.com\/account\/register","u":"9d59a7177a0b"};</script>
 <script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
 <script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
 window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
@@ -404,7 +406,7 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
 
 
 </head>
-<body id="account" class="template-customers-login" >
+<body id="create-account" class="template-customers-register" >
 
 
 <!--[if lt IE 7]>
@@ -425,12 +427,17 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
             <!-- USER MENU -->
             <ul class="header_user">
             
-                <li><a href="login.php" id="customer_login_link">Log in</a></li>
+            <?php if (!isset($_SESSION['email_session'])):?>
+                <li><a href="login.php" id="customer_login_link"> Log in</a></li>
                 
                 <li><a href="register.php" id="customer_register_link">Create an account</a></li>
-                
+                <?php endif; ?>  
             
-            <li class="checkout"><a href="../cart.html">Check out</a></li>
+            <?php if (isset($_SESSION['email_session'])):?>
+                <li onClick='location. href="modifier.php"'><i class="fa fa-user fa-lg"></i></li>
+                <li class="checkout"><a href="logout.php" style="font-size:15px;">Log out</a></li>
+
+            <?php endif; ?>  
             </ul>
             
         </div>
@@ -572,7 +579,7 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
 
     <!-- HEADER SEARCH -->
     <div class="header_search">
-        <form action="" method="get" class="search-form" role="search">
+        <form action="https://tm-shopify048-wheels.myshopify.com/search" method="get" class="search-form" role="search">
         <input id="search-field" name="q" type="text" placeholder="Search store..." class="hint" />
         <button id="search-submit" type="submit"><i class="fa fa-search"></i></button>
         </form>
@@ -595,7 +602,7 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
 <ul class="breadcrumb">
   <li><a href="../index.html" class="homepage-link" title="Back to the frontpage">Home</a></li>
   
-      <li><span class="page-title">Account</span></li>
+      <li><span class="page-title">modifier</span></li>
   
 </ul>
 
@@ -611,97 +618,61 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
     
     
 
-<div id="template" class="customer customer__login">
+<div id="template" class="customer customer__register">
+  <div id="customer">
+	  <!-- Create Customer -->
+	  <div id="create-customer">
+	    <div class="template_header">
+	      <h2 class="page_heading">modifier</h2>
+	    </div>
 
-<div id="customer">
+	    <div class="template_content">	
+      <div class="form-horizontal">   
+         
+      <form method="POST" action="modifier_client.php" id="create_customer" accept-charset="UTF-8"><input type="hidden" name="form_type" value="create_customer" /><input type="hidden" name="utf8" value="✓" />
+                
+        
+                <div id="first_name" class="clearfix form-group">
+                  <label for="first_name" class="login control-label col-sm-4">First Name</label>
+                  <div class="col-sm-4"><input type="text" value="<?php echo $_SESSION['nom_session'] ?>" name="nom_c" id="first_name" class="form-control" size="30" /></div>
+                </div>
+                
+        
+                <div id="last_name" class="clearfix form-group">
+                  <label for="last_name" class="login control-label col-sm-4">Last Name</label>
+                  <div class="col-sm-4"><input type="text" value="<?php echo $_SESSION['prenom_session'] ?>" name="prenom_c" id="last_name" class="form-control" size="30" /></div>
+                </div>
 
-<h2 class="page_heading">Customer Login</h2>
-          
-<div class="form-horizontal">
-<form method="post" action="verifier_client.php" id="customer_login" accept-charset="UTF-8"><input type="hidden" name="form_type" value="customer_login" /><input type="hidden" name="utf8" value="✓" />
-
-
-    
-<div id="login_email" class="clearfix large_form form-group">
-<label for="customer_email" class="login control-label col-sm-4">Email Address</label>
-<div class="col-sm-4">
-<input type="email" value="" name="login" id="login" class="form-control" size="30" />
-</div>
-</div>
-    
-
-
-<!-- Customer Account Login -->
-<div id="login_password" class="clearfix large_form form-group">
-<label for="customer_password" class="login control-label col-sm-4">Password</label>
-<div class="col-sm-4">
-<input type="password" value="" name="pwd" id="pwd" class="form-control" size="16" />
-</div>
-</div>
-
-<div class="form-group">
-<div id="forgot_password">
-<div class="col-sm-4 col-sm-offset-4">
-<a href="#" onclick="showRecoverPasswordForm();return false;">Forgot your password?</a>
-</div>
-</div>
-</div>
-    
-
-      
-<div class="form-group">
-<div class="action_bottom col-sm-offset-4 col-sm-4">
-<input class="btn btn-primary" type="submit" value="Sign In" name="connecter" action="/>
-<span class="note">or <a href="../index.html">Return to Store</a></span>
-</div>
-</div>
-
-</form>
-</div>
-
-</div>
-
-<!-- Recover Password Form -->
-<div id="recover-password" style='display:none' class="customer customer__recover">
-<h2 class="page_heading">Reset Password</h2>
-<p class="note">We will send you an email to reset your password.</p>
-<form method="post" action="" accept-charset="UTF-8"><input type="hidden" name="form_type" value="recover_customer_password" /><input type="hidden" name="utf8" value="✓" />
-
-<div id="recover_email" class="clearfix form-horizontal">
-<div class="form-group">
-    <label for="email" class="large col-sm-4">Email</label>
-    <div class="col-sm-4">
-        <input class="form-control" type="email" value="" size="30" name="email" id="recover-email" />
-    </div>
-</div>
-<div class="form-group action_bottom ">
-    <div class="col-sm-4 col-sm-offset-4">
-        <input class="btn btn-primary" type="submit" value="Submit" />
-        <span class="note">or <a href="#" onclick="hideRecoverPasswordForm();return false;">Cancel</a></span>
-    </div>
-</div>
-</div>
-</form>
+                <div id="Phone" class="clearfix form-group">
+                  <label for="Phone" class="login control-label col-sm-4">Phone</label>
+                  <div class="col-sm-4"><input type="text" value="<?php echo $_SESSION['telephone_session'] ?>" name="telephone_c" id="Phone" class="form-control" size="30" /></div>
+                </div>
+        
+                <div id="email" class="clearfix form-group">
+                  <label for="email" class="login control-label col-sm-4">Email Address</label>
+                  <div class="col-sm-4"><input type="email" value="<?php echo $_SESSION['email_session'] ?>" name="email_c" id="email" class="form-control" size="30" /></div>
+                </div>
+                <div id="password" class="clearfix form-group">
+                  <label for="password" class="login control-label col-sm-4">Password</label>
+                  <div class="col-sm-4"><input type="password" value="<?php echo $_SESSION['pass_session'] ?>" name="mdp_c" id="password" class="form-control password" size="30" /></div>
+                </div>
+                <!--<div id="password" class="clearfix form-group">
+                    <label for="password" class="login control-label col-sm-4">Confirm Password</label>
+                    <div class="col-sm-4"><input type="password" value="<?php echo $_SESSION['pass_session'] ?>" name="passwordCNF_c" id="password" class="form-control password" size="30" /></div>
+                  </div>-->
+                <div class="form-group">
+                  <div class="col-sm-offset-4 col-sm-4">
+                    <input class="btn btn-primary" type="submit" value="modifier" name="valider" />
+                    <span class="note">or <a href="index.php">Return to Store</a></span>
+                  </div>
+                </div>
+              </form>
+      </div>
+  	  </div>
+	  </div><!-- /#create-customer -->
+  </div>
 </div>
 
-<!-- Guest Login form for shops with optional customer accounts. This form is displayed only when users click on the checkout link on the cart page. -->
-
-
-</div>
-
-<script type="text/javascript">
-  function showRecoverPasswordForm() {
-    document.getElementById('recover-password').style.display = 'block';
-    document.getElementById('customer').style.display='none';
-  }
-
-  function hideRecoverPasswordForm() {
-    document.getElementById('recover-password').style.display = 'none';
-    document.getElementById('customer').style.display = 'block';
-  }
-
-  if (window.location.hash == '#recover') { showRecoverPasswordForm() }
-</script>
     
     </div>
     </div>
@@ -872,5 +843,5 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
 
 </body>
 
-<!-- Mirrored from tm-shopify048-wheels.myshopify.com/account/login by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2019 22:14:44 GMT -->
+<!-- Mirrored from tm-shopify048-wheels.myshopify.com/account/register by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2019 22:14:44 GMT -->
 </html>

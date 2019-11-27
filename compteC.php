@@ -26,38 +26,63 @@ class clientC {
             echo 'Erreur: '.$e->getMessage();
         }
 		
-	}
+    }
+    function Email($email){
 
-}
-class adresseC {
-    function ajouteradresse($adresse){
-		$sql="insert into adresse (nom,prenom,adr,postal,city) values (:nom,:prenom,:adr,:postal,:city)";
-		$db = config::getConnexion();
-		try{
-        $req=$db->prepare($sql);
-		
-        $nom=$adresse->getnom();
-        $prenom=$adresse->getprenom();
-        $adr=$adresse->getadr();
-        $postal=$adresse->getpostal();
-        $city=$adresse->getcity();
+        $sql="SELECT email FROM client";
+        $db = config::getConnexion();
+        $erreurMail="";
+        try{
+        $stmt=$db->prepare($sql);
+        
+        $stmt->execute();
+        while ($data =$stmt->fetch())
+        {
+        if ($email ==$data['email'] ) {
 
-		$req->bindValue(':nom',$nom);
-		$req->bindValue(':prenom',$prenom);
-		$req->bindValue(':adr',$adr);
-        $req->bindValue(':postal',$postal);
-        $req->bindValue(':city',$city);
-		
-		
-            $req->execute();
-           
+
+            $erreurMail= "E-mail Deja existant ";
         }
-        catch (Exception $e){
-            echo 'Erreur: '.$e->getMessage();
         }
-		
-	}
+        return $erreurMail;
+    }
+    catch (Exception $e){
+        echo 'Erreur: '.$e->getMessage();
+    }
 
+ }
+    public function Logedin($conn,$login,$pwd)
+	{
+		$req="select * from client   where email='$login' && mdp='$pwd'";
+		$rep=$conn->query($req);
+		return $rep->fetchAll();
+	}
+    public static  function modifierClient($nom,$prenom,$telephone,$email,$mdp,$id)
+{
+    
+     
+     $db =config::getConnexion();
+     
+                $s=$db->prepare('UPDATE client SET nom=:nom,prenom=:prenom,telephone=:telephone,email=:email,mdp=:mdp where id=:id') ;
+               
+        $s->bindValue(':nom', $nom);
+        $s->bindValue(':prenom', $prenom);
+        $s->bindValue(':telephone', $telephone);
+        $s->bindValue(':email',$email);
+        $s->bindValue(':mdp',$mdp);
+        $s->bindValue(':id',$id);
+        
+
+                 $s->execute();
+              
+    
+     
+} 
 }
+
+
+   
+
+
 
 ?>

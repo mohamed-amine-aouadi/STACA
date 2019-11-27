@@ -1,4 +1,6 @@
-
+<?php 
+session_start();
+?>
 <!doctype html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -6,7 +8,7 @@
 <!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->  
 
-<!-- Mirrored from tm-shopify048-wheels.myshopify.com/account/login by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2019 22:14:43 GMT -->
+<!-- Mirrored from tm-shopify048-wheels.myshopify.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2019 22:13:23 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8">
@@ -15,10 +17,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
     
-    <title>Account | Wheels &amp; Tyres</title>
+    <title> STACA | STACA</title>
     
 
-    <link rel="canonical" href="login.php" />
+    <link rel="canonical" href="index.html" />
   	<link href="http://cdn.shopify.com/s/files/1/0508/6409/t/2/assets/favicon.ico?0" rel="shortcut icon" type="image/x-icon" />
     <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/5086409/digital_wallets/dialog">
 <script id="shopify-features" type="application/json">{"accessToken":"a1f9d818538fd877d4c32bc79ff1e2f5","betas":[],"domain":"tm-shopify048-wheels.myshopify.com","predictiveSearch":true,"shopId":5086409,"smart_payment_buttons_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/spb.en.js","dynamic_checkout_cart_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js"}</script>
@@ -30,12 +32,12 @@ Shopify.theme.handle = "null";
 Shopify.theme.style = {"id":null,"handle":null};</script>
 <script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
 <script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadJS=n(),t.detectLoadJS=n()}(window);</script>
-<script id="__st">var __st={"a":5086409,"offset":-18000,"reqid":"48a1b32c-87b9-47ef-9357-fc8190f2b8b3","pageurl":"tm-shopify048-wheels.myshopify.com\/account\/login","u":"102d51256dc2"};</script>
+<script id="__st">var __st={"a":5086409,"offset":-18000,"reqid":"4b9a9104-4e3f-4ce2-abb9-b64147c45cc3","pageurl":"tm-shopify048-wheels.myshopify.com\/","u":"22983a1a2985","p":"home"};</script>
 <script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
 <script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
 window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
 window.ShopifyAnalytics.meta.currency = 'USD';
-var meta = {"page":{}};
+var meta = {"page":{"pageType":"home"}};
 for (var attr in meta) {
   window.ShopifyAnalytics.meta[attr] = meta[attr];
 }</script>
@@ -100,12 +102,12 @@ for (var attr in meta) {
   trekkie.load = function(config) {
     trekkie.config = config;
     var script = document.createElement('script');
-    script.type = 'text/javascript';
+    script.type = '../../text/javascript';
     script.onerror = function(e) {
       (new Image()).src = 'http://v.shopify.com/internal_errors/track?error=trekkie_load';
     };
     script.async = true;
-    script.src = '../../cdn.shopify.com/s/javascripts/tricorder/trekkie.storefront.min2cbf.js?v=2019.11.04.1';
+    script.src = '../../../cdn.shopify.com/s/javascripts/tricorder/trekkie.storefront.min2cbf.js?v=2019.11.04.1';
     var first = document.getElementsByTagName('script')[0];
     first.parentNode.insertBefore(script, first);
   };
@@ -136,7 +138,7 @@ for (var attr in meta) {
         window.BOOMR.shopId = 5086409;
         window.BOOMR.themeId = 8463075;
         window.BOOMR.url =
-          "../../cdn.shopify.com/shopifycloud/boomerang/boomerang-latest.min.js";
+          "../../../cdn.shopify.com/shopifycloud/boomerang/boomerang-latest.min.js";
         var where = document.currentScript || document.getElementsByTagName("script")[0];
         if (!where || !where.parentNode){
           return;
@@ -264,7 +266,7 @@ for (var attr in meta) {
       
         window.ShopifyAnalytics.lib.page(
           null,
-          {}
+          {"pageType":"home"}
         );
       
       
@@ -274,12 +276,12 @@ for (var attr in meta) {
   
       var eventsListenerScript = document.createElement('script');
       eventsListenerScript.async = true;
-      eventsListenerScript.src = "../../cdn.shopify.com/s/assets/shop_events_listener-17b815ecd2d75d5d3ec1b7a2a59daadee017bd9097e9b4629937b0a78cf0ecaa.js";
+      eventsListenerScript.src = "../../../cdn.shopify.com/s/assets/shop_events_listener-17b815ecd2d75d5d3ec1b7a2a59daadee017bd9097e9b4629937b0a78cf0ecaa.js";
       document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
     
 })();</script>
-<script integrity="sha256-/LWbHGRT9fhJCeTFZxJJr7GGGJRbAOrw4xIjESlEc8I=" crossorigin="anonymous" data-source-attribution="shopify.loadjs" defer="defer" src="../../cdn.shopify.com/s/assets/storefront/load_js-fcb59b1c6453f5f84909e4c5671249afb18618945b00eaf0e3122311294473c2.js"></script>
-<script integrity="sha256-2P0MRbAT3p4Oh8olbuAvRl44EikliFx94nnWg4+R+mo=" data-source-attribution="shopify.dynamic-checkout" defer="defer" src="../../cdn.shopify.com/s/assets/storefront/features-d8fd0c45b013de9e0e87ca256ee02f465e38122925885c7de279d6838f91fa6a.js" crossorigin="anonymous"></script>
+<script integrity="sha256-/LWbHGRT9fhJCeTFZxJJr7GGGJRbAOrw4xIjESlEc8I=" crossorigin="anonymous" data-source-attribution="shopify.loadjs" defer="defer" src="../cdn.shopify.com/s/assets/storefront/load_js-fcb59b1c6453f5f84909e4c5671249afb18618945b00eaf0e3122311294473c2.js"></script>
+<script integrity="sha256-2P0MRbAT3p4Oh8olbuAvRl44EikliFx94nnWg4+R+mo=" data-source-attribution="shopify.dynamic-checkout" defer="defer" src="../cdn.shopify.com/s/assets/storefront/features-d8fd0c45b013de9e0e87ca256ee02f465e38122925885c7de279d6838f91fa6a.js" crossorigin="anonymous"></script>
 
 
 <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
@@ -306,9 +308,6 @@ for (var attr in meta) {
     <style type="text/css">.gradient {filter: none;}</style>
     <![endif]-->
 
-    
-    <script src="../../../cdn.shopify.com/s/assets/themes_support/shopify_common-8ea6ac3faf357236a97f5de749df4da6e8436ca107bc3a4ee805cbf08bc47392.js" type="text/javascript"></script>
-    <script src="../../../cdn.shopify.com/s/assets/themes_support/customer_area-4beccea87758d91106a581ba89341d9b51842f6da79209258c8297239e950343.js" type="text/javascript"></script>
     
 
     <script src="../../../cdn.shopify.com/s/assets/themes_support/option_selection-fe6b72c2bbdd3369ac0bfefe8648e3c889efca213baefd4cfb0dd9363563831f.js" type="text/javascript"></script>
@@ -404,7 +403,7 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
 
 
 </head>
-<body id="account" class="template-customers-login" >
+<body id="wheels-tyres" class="template-index" >
 
 
 <!--[if lt IE 7]>
@@ -424,14 +423,18 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
             
             <!-- USER MENU -->
             <ul class="header_user">
-            
-                <li><a href="login.php" id="customer_login_link">Log in</a></li>
+            <?php if (!isset($_SESSION['email_session'])):?>
+                <li><a href="login.php" id="customer_login_link"> Log in</a></li>
                 
                 <li><a href="register.php" id="customer_register_link">Create an account</a></li>
-                
+                <?php endif; ?>  
             
-            <li class="checkout"><a href="../cart.html">Check out</a></li>
-            </ul>
+            <?php if (isset($_SESSION['email_session'])):?>
+                <li onClick='location. href="modifier.php"'><i class="fa fa-user fa-lg"></i></li>
+                <li class="checkout"><a href="logout.php" style="font-size:15px;">Log out</a></li>
+
+            <?php endif; ?>    
+        </ul>
             
         </div>
         <div class="col-xs-4">
@@ -442,7 +445,7 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
         <select id="currencies" name="currencies">
           
           
-          <option value="USD" selected="selected">USD</option>
+          <option value="USD" selected="selected">DT</option>
           
             
           
@@ -451,7 +454,7 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
             
           
             
-            <option value="GBP">GBP</option>
+            <option value="GBP">USD</option>
             
           
         </select>
@@ -469,15 +472,15 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
         <div class="col-sm-6">
             <!-- LOGO -->
             <div id="logo">
-            <a href="../index.html">STACA</a>
+            <a style="font-size:80px;margin-top:20px;" class="staca" href="index.html">STACA</a>
             </div>
         </div>
         <div class="col-sm-6">
             <!-- HEADER CART -->
-          	<div class="header_cart"><a href="../cart.html"><i class="fa fa-shopping-cart"></i><b>Cart:</b><span class="cart-total-items"><span class="count">0</span></span><span>item(s)</span><span>&nbsp;&ndash;&nbsp;</span><span class="money cart-total-price">$0.00</span></a></div>
+          	<div class="header_cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i><b>Cart:</b><span class="cart-total-items"><span class="count">0</span></span><span>item(s)</span><span>&nbsp;&ndash;&nbsp;</span><span class="money cart-total-price">0.00DT</span></a></div>
 
             <!-- CUSTOM HEADER BLOCK -->
-          	<div class="custom_header1"><h3><i class="fa fa-phone"></i>+216-71-234-567</h3></div>
+          	<div class="custom_header1"><h3><i class="fa fa-phone"></i><font color='#77b'>+</font>216-71-234-567</h3></div>
         </div>
     </div>
     </div>
@@ -497,8 +500,8 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
     
     
     
-    <li class=" first">
-        <a href="../index.html" title="">Home</a>
+    <li class=" first active">
+        <a href="index.html" title="">Home</a>
         
     </li>
     
@@ -508,20 +511,20 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
     
     
     <li class=" has-dropdown">
-        <a href="../collections/all.html" title="">Products</a>
+        <a href="collections/all.html" title="">Products</a>
         
         <ul>
         
         
-            <li class=" first"><a class="first" href="../collections/wheels.html">Wheels</a></li>
+            <li class=" first"><a class="first" href="collections/wheels.html">Wheels</a></li>
         
-            <li class=""><a class="" href="../collections/accessories.html">Accessories</a></li>
+            <li class=""><a class="" href="../../collections/accessories.html">Accessories</a></li>
         
-            <li class=""><a class="" href="../collections/sport-tyres.html">Sport Tyres</a></li>
+            <li class=""><a class="" href="../../collections/sport-tyres.html">Sport Tyres</a></li>
         
-            <li class=""><a class="" href="../collections/winter-tyres.html">Winter Tyres</a></li>
+            <li class=""><a class="" href="../../collections/winter-tyres.html">Winter Tyres</a></li>
         
-            <li class=" last"><a class="last" href="../collections/summer-tyres.html">Summer Tyres</a></li>
+            <li class=" last"><a class="last" href="../../collections/summer-tyres.html">Summer Tyres</a></li>
         
         
         </ul>
@@ -534,7 +537,7 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
     
     
     <li class="">
-        <a href="../blogs/blog.html" title="">Blog</a>
+        <a href="../../blogs/blog.html" title="">Blog</a>
         
     </li>
     
@@ -544,7 +547,7 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
     
     
     <li class="">
-        <a href="../pages/about-us.html" title="">About Us</a>
+        <a href="../../pages/about-us.html" title="">About Us</a>
         
     </li>
     
@@ -554,7 +557,7 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
     
     
     <li class="">
-        <a href="../pages/documentation.html" title="">Documentation</a>
+        <a href="../../pages/documentation.html" title="">Offers</a>
         
     </li>
     
@@ -564,7 +567,7 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
     
     
     <li class=" last">
-        <a href="../pages/contact-us.html" title="">Contact us</a>
+        <a href="pages/contact-us.html" title="">Contact us</a>
         
     </li>
     
@@ -572,7 +575,7 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
 
     <!-- HEADER SEARCH -->
     <div class="header_search">
-        <form action="" method="get" class="search-form" role="search">
+        <form action="https://tm-shopify048-wheels.myshopify.com/search" method="get" class="search-form" role="search">
         <input id="search-field" name="q" type="text" placeholder="Search store..." class="hint" />
         <button id="search-submit" type="submit"><i class="fa fa-search"></i></button>
         </form>
@@ -587,17 +590,141 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
 <!-- SHOWCASE CUSTOM BLOCKS -->
 
 
+<div class="container">
+<div class="slider_wrap">
+<div class="nivoSlider">
+
+
+<a href="collections/wheels.html">
+<img src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/slide1_imagecfcd.jpg?0" alt="" title="#htmlcaption-1" />
+</a>
+
+
+
+<a href="collections/accessories.html">
+<img src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/slide2_imagecfcd.jpg?0" alt="" title="#htmlcaption-2" />
+</a>
+
+
+
+<a href="collections/sport-tyres.html">
+<img src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/slide3_imagecfcd.jpg?0" alt="" title="#htmlcaption-3" />
+</a>
+
+
+
+
+
+
+</div>
+</div>
+</div>
+
+
+<div class="caption_hidden">
+
+    <div id="htmlcaption-1">
+        <a href="collections/wheels.html">
+      	<i class="fa fa-shopping-cart"></i>
+        <h2>The Best</h2>
+        <h3>Tyres</h3>
+        <p>Dovitae diam purus luctus facilisis. Nullam at ipsum eros tris tique ultrice. Duis quis imperdie dolore est.</p>
+        </a>
+    </div>
+
+    <div id="htmlcaption-2">
+        <a href="collections/accessories.html">
+      	<i class="fa fa-shopping-cart"></i>
+        <h2>The Best</h2>
+        <h3>Tyres</h3>
+        <p>Dovitae diam purus luctus facilisis. Nullam at ipsum eros tris tique ultrice. Duis quis imperdie dolore est.</p>
+        </a>
+    </div>
+
+    <div id="htmlcaption-3">
+        <a href="collections/sport-tyres.html">
+      	<i class="fa fa-shopping-cart"></i>
+        <h2>The Best</h2>
+        <h3>Tyres</h3>
+        <p>Dovitae diam purus luctus facilisis. Nullam at ipsum eros tris tique ultrice. Duis quis imperdie dolore est.</p>
+        </a>
+    </div>
+
+    <div id="htmlcaption-4">
+        
+      	<i class="fa fa-shopping-cart"></i>
+        <h2></h2>
+        <h3></h3>
+        <p></p>
+        
+    </div>
+
+    <div id="htmlcaption-5">
+        
+      	<i class="fa fa-shopping-cart"></i>
+        <h2></h2>
+        <h3></h3>
+        <p></p>
+        
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+$(window).load(function() {
+    $('.nivoSlider').nivoSlider({
+        effect:'fade',
+        animSpeed:500,
+        pauseTime:7000,
+        startSlide:0,
+        pauseOnHover:true,
+        directionNav:true,
+        directionNavHide:false,
+        controlNav:false
+    });
+});
+</script>
+
+<div id="showcase">
+<div class="container">
+<div class="row">
+    <div class="col-xs-4 custom_showcase custom_showcase1">
+        <a href="collections/wheels.html">
+            <img src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/custom_showcase1_imgcfcd.jpg?0" />
+            <div>
+                <h3>Winter</h3>
+                <h4>Tyres</h4>
+            </div>
+        </a>
+    </div>
+    <div class="col-xs-4 custom_showcase custom_showcase2">
+        <a href="collections/accessories.html">
+        <img src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/custom_showcase2_imgcfcd.jpg?0" />
+        <div>
+                <h3>Summer</h3>
+                <h4>Tyres</h4>
+            </div>
+        </a>
+    </div>
+    <div class="col-xs-4 custom_showcase custom_showcase3">
+        <a href="collections/winter-tyres.html">
+            <img src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/custom_showcase3_imgcfcd.jpg?0" />
+            <div>
+                <h3>Wheels</h3>
+                <h4>Collection</h4>
+            </div>
+        </a>
+    </div>
+</div>
+</div>
+</div>
+
+
 <!-- MAIN CONTENT -->
 <div id="main" role="main">
 <div class="container">
 
-
-<ul class="breadcrumb">
-  <li><a href="../index.html" class="homepage-link" title="Back to the frontpage">Home</a></li>
-  
-      <li><span class="page-title">Account</span></li>
-  
-</ul>
 
 
 
@@ -611,97 +738,520 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
     
     
 
-<div id="template" class="customer customer__login">
-
-<div id="customer">
-
-<h2 class="page_heading">Customer Login</h2>
-          
-<div class="form-horizontal">
-<form method="post" action="verifier_client.php" id="customer_login" accept-charset="UTF-8"><input type="hidden" name="form_type" value="customer_login" /><input type="hidden" name="utf8" value="✓" />
+<div class="index-scope">
 
 
+
+  <!--
+
+-->
+
+
+  
+  
+
+<h2 class="page_heading">Featured Products</h2>
+
+  
+
+<div class="product-listing__index">
     
-<div id="login_email" class="clearfix large_form form-group">
-<label for="customer_email" class="login control-label col-sm-4">Email Address</label>
-<div class="col-sm-4">
-<input type="email" value="" name="login" id="login" class="form-control" size="30" />
-</div>
-</div>
-    
-
-
-<!-- Customer Account Login -->
-<div id="login_password" class="clearfix large_form form-group">
-<label for="customer_password" class="login control-label col-sm-4">Password</label>
-<div class="col-sm-4">
-<input type="password" value="" name="pwd" id="pwd" class="form-control" size="16" />
-</div>
-</div>
-
-<div class="form-group">
-<div id="forgot_password">
-<div class="col-sm-4 col-sm-offset-4">
-<a href="#" onclick="showRecoverPasswordForm();return false;">Forgot your password?</a>
-</div>
-</div>
-</div>
-    
-
       
-<div class="form-group">
-<div class="action_bottom col-sm-offset-4 col-sm-4">
-<input class="btn btn-primary" type="submit" value="Sign In" name="connecter" action="/>
-<span class="note">or <a href="../index.html">Return to Store</a></span>
-</div>
+    
+    <div class="product_listing_main"><div class="row">
+    
+
+
+
+
+
+
+<div class="product col-sm-3">
+<div>
+
+<div class="product_img">  
+    <a href="products/adrenalin-potenza-re001.html">
+    	<img src="../../../cdn.shopify.com/s/files/1/0508/6409/products/adrenalin_potenza_re001_1_mediumb98c.png?v=1400671567" alt="Adrenalin Potenza RE001" />
+    </a>
 </div>
 
-</form>
-</div>
-
-</div>
-
-<!-- Recover Password Form -->
-<div id="recover-password" style='display:none' class="customer customer__recover">
-<h2 class="page_heading">Reset Password</h2>
-<p class="note">We will send you an email to reset your password.</p>
-<form method="post" action="" accept-charset="UTF-8"><input type="hidden" name="form_type" value="recover_customer_password" /><input type="hidden" name="utf8" value="✓" />
-
-<div id="recover_email" class="clearfix form-horizontal">
-<div class="form-group">
-    <label for="email" class="large col-sm-4">Email</label>
-    <div class="col-sm-4">
-        <input class="form-control" type="email" value="" size="30" name="email" id="recover-email" />
+<div class="product_info">
+    <div class="product_name">
+        <a href="../../products/adrenalin-potenza-re001.html">Adrenalin Potenza RE001</a>
     </div>
-</div>
-<div class="form-group action_bottom ">
-    <div class="col-sm-4 col-sm-offset-4">
-        <input class="btn btn-primary" type="submit" value="Submit" />
-        <span class="note">or <a href="#" onclick="hideRecoverPasswordForm();return false;">Cancel</a></span>
+    <div class="product_desc">Nowadays we have great opportunities to satisfy our demands with the high quality products. We ar...</div>
+    <div class="product_price">
+        
+        <span class="money">199.00DT</span>
+        
+        <span class="money compare-at-price">220.00DT</span>
+        
     </div>
+    <!-- 
+    This is just a regular add product form. 
+    You should be able to add any valid input fields to it 
+-->
+<form method="post" action="https://tm-shopify048-wheels.myshopify.com/cart/add">
+    <!-- We can leave this in, since the select comes later, 
+        so it will override if user picks something different. -->
+    
+        <input type="hidden" name="id" value="696762915" />
+    
+
+  	
+
+	<!-- START BUY -->
+	    		    
+		    <button class="btn btn-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
+		
+	<!-- END BUY -->
+</form>         
+</div>
+  
 </div>
 </div>
-</form>
+
+
+    
+    
+    
+
+
+   
+    
+      
+    
+    
+    
+
+
+
+
+
+
+<div class="product col-sm-3">
+<div>
+
+<div class="product_img">  
+    <a href="products/ats-classic.html">
+    	<img src="../../../cdn.shopify.com/s/files/1/0508/6409/products/ats_classic_1_mediumcc78.png?v=1400671573" alt="ATS Classic" />
+    </a>
 </div>
 
-<!-- Guest Login form for shops with optional customer accounts. This form is displayed only when users click on the checkout link on the cart page. -->
+<div class="product_info">
+    <div class="product_name">
+        <a href="products/ats-classic.html">ATS Classic</a>
+    </div>
+    <div class="product_desc">We are proud to present our wonderful choice of wheels and tires. Without a doubt we are the lead...</div>
+    <div class="product_price">
+        
+        <span class="money">60.00DT</span>
+        
+    </div>
+    <!-- 
+    This is just a regular add product form. 
+    You should be able to add any valid input fields to it 
+-->
+<form method="post" action="https://tm-shopify048-wheels.myshopify.com/cart/add">
+    <!-- We can leave this in, since the select comes later, 
+        so it will override if user picks something different. -->
+    
+        <input type="hidden" name="id" value="696762959" />
+    
 
+  	
+
+	<!-- START BUY -->
+	    		    
+		    <button class="btn btn-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
+		
+	<!-- END BUY -->
+</form>         
+</div>
+  
+</div>
+</div>
+
+
+    
+    
+    
+
+
+   
+    
+      
+    
+    
+    
+
+
+
+
+
+
+<div class="product col-sm-3">
+<div>
+
+<div class="product_img">  
+    <a href="products/bridgestone-turanza-er300-ecopia.html">
+    	<img src="../../../cdn.shopify.com/s/files/1/0508/6409/products/bridgestone_turanza_er300_ecopia_1_medium5df4.png?v=1400671602" alt="Bridgestone Turanza ER300 Ecopia" />
+    </a>
+</div>
+
+<div class="product_info">
+    <div class="product_name">
+        <a href="../../products/bridgestone-turanza-er300-ecopia.html">Bridgestone Turanza ER300 Ecopia</a>
+    </div>
+    <div class="product_desc">We care about the durability of our products and we are sure that it is perfect. As you understan...</div>
+    <div class="product_price">
+        
+        <span class="money">320.00DT</span>
+        
+        <span class="money compare-at-price">400.00DT</span>
+        
+    </div>
+    <!-- 
+    This is just a regular add product form. 
+    You should be able to add any valid input fields to it 
+-->
+<form method="post" action="https://tm-shopify048-wheels.myshopify.com/cart/add">
+    <!-- We can leave this in, since the select comes later, 
+        so it will override if user picks something different. -->
+    
+        <input type="hidden" name="id" value="696763123" />
+    
+
+  	
+
+	<!-- START BUY -->
+	    		    
+		    <button class="btn btn-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
+		
+	<!-- END BUY -->
+</form>         
+</div>
+  
+</div>
+</div>
+
+
+    
+    
+    
+
+
+   
+    
+      
+    
+    
+    
+
+
+
+
+
+
+<div class="product col-sm-3">
+<div>
+
+<div class="product_img">  
+    <a href="products/ats-cup.html">
+    	<img src="../../../cdn.shopify.com/s/files/1/0508/6409/products/ats_cup_1_medium2515.png?v=1400671579" alt="ATS Cup" />
+    </a>
+</div>
+
+<div class="product_info">
+    <div class="product_name">
+        <a href="../../products/ats-cup.html">ATS Cup</a>
+    </div>
+    <div class="product_desc">Without a doubt we are the leading company in this sphere. Our company is the pioneer of this bus...</div>
+    <div class="product_price">
+        
+        <span class="money">78.00DT</span>
+        
+    </div>
+    <!-- 
+    This is just a regular add product form. 
+    You should be able to add any valid input fields to it 
+-->
+<form method="post" action="https://tm-shopify048-wheels.myshopify.com/cart/add">
+    <!-- We can leave this in, since the select comes later, 
+        so it will override if user picks something different. -->
+    
+        <input type="hidden" name="id" value="696762999" />
+    
+
+  	
+
+	<!-- START BUY -->
+	    		    
+		    <button class="btn btn-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
+		
+	<!-- END BUY -->
+</form>         
+</div>
+  
+</div>
+</div>
+
+
+    
+    </div></div>
+    
+
+
+   
+    
+      
+    
+    <div class="product_listing_main"><div class="row">
+    
+
+
+
+
+
+
+<div class="product col-sm-3">
+<div>
+
+<div class="product_img">  
+    <a href="products/bridgestone-potenza-re050a.html">
+    	<img src="../../../cdn.shopify.com/s/files/1/0508/6409/products/bridgestone_potenza_re050a_1_medium9e96.png?v=1400671590" alt="Bridgestone Potenza RE050A" />
+    </a>
+</div>
+
+<div class="product_info">
+    <div class="product_name">
+        <a href="../../products/bridgestone-potenza-re050a.html">Bridgestone Potenza RE050A</a>
+    </div>
+    <div class="product_desc">We guarantee the premium quality and fair prices of our goods. The interesting design is very imp...</div>
+    <div class="product_price">
+        
+        <span class="money">420.00DT</span>
+        
+    </div>
+    <!-- 
+    This is just a regular add product form. 
+    You should be able to add any valid input fields to it 
+-->
+<form method="post" action="https://tm-shopify048-wheels.myshopify.com/cart/add">
+    <!-- We can leave this in, since the select comes later, 
+        so it will override if user picks something different. -->
+    
+        <input type="hidden" name="id" value="696763087" />
+    
+
+  	
+
+	<!-- START BUY -->
+	    		    
+		    <button class="btn btn-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
+		
+	<!-- END BUY -->
+</form>         
+</div>
+  
+</div>
+</div>
+
+
+    
+    
+    
+
+
+   
+    
+      
+    
+    
+    
+
+
+
+
+
+
+<div class="product col-sm-3">
+<div>
+
+<div class="product_img">  
+    <a href="products/ats-dtm-competition.html">
+    	<img src="../../../cdn.shopify.com/s/files/1/0508/6409/products/ats_dtm_competition_1_mediumfb57.png?v=1400671585" alt="ATS DTM Competition" />
+    </a>
+</div>
+
+<div class="product_info">
+    <div class="product_name">
+        <a href="../../products/ats-dtm-competition.html">ATS DTM Competition</a>
+    </div>
+    <div class="product_desc">Our company is the pioneer of this business because we provide a great number of new technologies...</div>
+    <div class="product_price">
+        
+        <span class="money">399.00DT</span>
+        
+        <span class="money compare-at-price">500.00DT</span>
+        
+    </div>
+    <!-- 
+    This is just a regular add product form. 
+    You should be able to add any valid input fields to it 
+-->
+<form method="post" action="https://tm-shopify048-wheels.myshopify.com/cart/add">
+    <!-- We can leave this in, since the select comes later, 
+        so it will override if user picks something different. -->
+    
+        <input type="hidden" name="id" value="696763051" />
+    
+
+  	
+
+	<!-- START BUY -->
+	    		    
+		    <button class="btn btn-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
+		
+	<!-- END BUY -->
+</form>         
+</div>
+  
+</div>
+</div>
+
+
+    
+    
+    
+
+
+   
+    
+      
+    
+    
+    
+
+
+
+
+
+
+<div class="product col-sm-3">
+<div>
+
+<div class="product_img">  
+    <a href="products/bridgestone-turanza-er30.html">
+    	<img src="../../../cdn.shopify.com/s/files/1/0508/6409/products/bridgestone_turanza_er30_1_medium4a30.png?v=1400671596" alt="Bridgestone Turanza ER30" />
+    </a>
+</div>
+
+<div class="product_info">
+    <div class="product_name">
+        <a href="products/bridgestone-turanza-er30.html">Bridgestone Turanza ER30</a>
+    </div>
+    <div class="product_desc">The interesting design is very important thing in our sphere and we are trying to stay in touch w...</div>
+    <div class="product_price">
+        
+        <span class="money">170.00DT</span>
+        
+    </div>
+    <!-- 
+    This is just a regular add product form. 
+    You should be able to add any valid input fields to it 
+-->
+<form method="post" action="https://tm-shopify048-wheels.myshopify.com/cart/add">
+    <!-- We can leave this in, since the select comes later, 
+        so it will override if user picks something different. -->
+    
+        <input type="hidden" name="id" value="696763107" />
+    
+
+  	
+
+	<!-- START BUY -->
+	    		    
+		    <button class="btn btn-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
+		
+	<!-- END BUY -->
+</form>         
+</div>
+  
+</div>
+</div>
+
+
+    
+    
+    
+
+
+   
+    
+      
+    
+    
+    
+
+
+
+
+
+
+<div class="product col-sm-3">
+<div>
+
+<div class="product_img">  
+    <a href="products/excelsior-stahl-sport-17-e55-a1.html">
+    	<img src="../../../cdn.shopify.com/s/files/1/0508/6409/products/excelsior_stahl-sport_17-e55-a1_1_mediumc9e2.png?v=1400671618" alt="Excelsior Stahl-Sport 17-E55-A1" />
+    </a>
+</div>
+
+<div class="product_info">
+    <div class="product_name">
+        <a href="../../products/excelsior-stahl-sport-17-e55-a1.html">Excelsior Stahl-Sport 17-E55-A1</a>
+    </div>
+    <div class="product_desc">You must remember that we have a great number of different promos so you can get a pretty good di...</div>
+    <div class="product_price">
+        
+        <span class="money">60.00DT</span>
+        
+    </div>
+    <!-- 
+    This is just a regular add product form. 
+    You should be able to add any valid input fields to it 
+-->
+<form method="post" action="https://tm-shopify048-wheels.myshopify.com/cart/add">
+    <!-- We can leave this in, since the select comes later, 
+        so it will override if user picks something different. -->
+    
+        <input type="hidden" name="id" value="696763219" />
+    
+
+  	
+
+	<!-- START BUY -->
+	    		    
+		    <button class="btn btn-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
+		
+	<!-- END BUY -->
+</form>         
+</div>
+  
+</div>
+</div>
+
+
+    
+
+
+</div></div>   
+    
+</div>
 
 </div>
 
-<script type="text/javascript">
-  function showRecoverPasswordForm() {
-    document.getElementById('recover-password').style.display = 'block';
-    document.getElementById('customer').style.display='none';
-  }
-
-  function hideRecoverPasswordForm() {
-    document.getElementById('recover-password').style.display = 'none';
-    document.getElementById('customer').style.display = 'block';
-  }
-
-  if (window.location.hash == '#recover') { showRecoverPasswordForm() }
-</script>
     
     </div>
     </div>
@@ -716,6 +1266,15 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
 </div>
 
 
+<!-- BOTTOM -->
+<div id="bottom">
+<div class="container">
+    <a href="collections/winter-tyres.html">
+        <img src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/custom_bottom_imgcfcd.jpg?0" />
+    </a>
+</div>
+</div>
+
 
 <!-- FOOTER -->
 <footer id="footer">
@@ -726,17 +1285,17 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
                 <h3>Information</h3>
                 <ul class="list">
                   
-                    <li ><a href="../index.html" title="">Home</a></li>
+                    <li class="active"><a href="index.html" title="">Home</a></li>
                     
-                    <li ><a href="../search.html" title="">Search</a></li>
+                    <li ><a href="../../search.html" title="">Search</a></li>
                     
-                    <li ><a href="../blogs/blog.html" title="">Blog</a></li>
+                    <li ><a href="../../blogs/blog.html" title="">Blog</a></li>
                     
-                    <li ><a href="../pages/about-us.html" title="">About Us</a></li>
+                    <li ><a href="../../pages/about-us.html" title="">About Us</a></li>
                     
-                    <li ><a href="../pages/documentation.html" title="">Documentation</a></li>
+                    <li ><a href="../../pages/documentation.html" title="">Documentation</a></li>
                     
-                    <li ><a href="../pages/contact-us.html" title="">Contact us</a></li>
+                    <li ><a href="../../pages/contact-us.html" title="">Contact us</a></li>
                     
                 </ul>
             </div>
@@ -745,15 +1304,15 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
                 <h3>Products</h3>
                 <ul class="list">
                     
-                    <li ><a href="../collections/wheels.html" title="">Wheels</a></li>
+                    <li ><a href="../../collections/wheels.html" title="">Wheels</a></li>
                     
-                    <li ><a href="../collections/accessories.html" title="">Accessories</a></li>
+                    <li ><a href="../../collections/accessories.html" title="">Accessories</a></li>
                     
-                    <li ><a href="../collections/sport-tyres.html" title="">Sport Tyres</a></li>
+                    <li ><a href="../../collections/sport-tyres.html" title="">Sport Tyres</a></li>
                     
-                    <li ><a href="../collections/winter-tyres.html" title="">Winter Tyres</a></li>
+                    <li ><a href="../../collections/winter-tyres.html" title="">Winter Tyres</a></li>
                     
-                    <li ><a href="../collections/summer-tyres.html" title="">Summer Tyres</a></li>
+                    <li ><a href="../../collections/summer-tyres.html" title="">Summer Tyres</a></li>
                     
                 </ul>
             </div>
@@ -776,7 +1335,7 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
                 <p>
                     <i class="fa fa-phone"></i>
                     <span>+216-71-234-567</span>
-                    <span>+216-71-234-568</span>
+                    <span>+216-71-234-567</span>
                 </p>
             </div>
     
@@ -800,8 +1359,8 @@ $(document).ready(function(){
 </script>
 
 
-<script src="../services/javascripts/currencies.js" type="text/javascript"></script>
-<script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.currencies.mincfcd.js?0" type="text/javascript"></script>
+<script src="../../services/javascripts/currencies.js" type="text/javascript"></script>
+<script src="../../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.currencies.mincfcd.js?0" type="text/javascript"></script>
 
 <script>
 
@@ -872,5 +1431,10 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
 
 </body>
 
-<!-- Mirrored from tm-shopify048-wheels.myshopify.com/account/login by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2019 22:14:44 GMT -->
+<!-- Mirrored from tm-shopify048-wheels.myshopify.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2019 22:14:28 GMT -->
+<style type="text/css">
+ .staca{font-size: 200px;} 
+
+</style>
+
 </html>
