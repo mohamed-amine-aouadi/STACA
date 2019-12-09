@@ -5,51 +5,76 @@ class client{
 	private $prenom;
 	private $telephone;
 	private $email;
+	private $adr;
+	private $postal;
+	private $city;
 	private $mdp;
-	function __construct($id,$nom,$prenom,$telephone,$email,$mdp){
-		$this->id=$id;
+	function __construct($nom,$prenom,$telephone,$email,$adr,$postal,$city,$mdp){
 		$this->nom=$nom;
 		$this->prenom=$prenom;
 		$this->telephone=$telephone;
 		$this->email=$email;
+		$this->adr=$adr;
+		$this->postal=$postal;
+		$this->city=$city;
 		$this->mdp=$mdp;
 	}
-	function getId(){
+	function getid(){
 		return $this->id;
 	}
-	function getNom(){
+	function getnom(){
 		return $this->nom;
 	}
-	function getPrenom(){
+	function getprenom(){
 		return $this->prenom;
 	}
-	function getTelephone(){
+	function gettelephone(){
 		return $this->telephone;
 	}
-	function getEmail(){
+	function getemail(){
 		return $this->email;
 	}
-	function getMdp(){
+	function getadr(){
+		return $this->adr;
+	}
+	function getpostal(){
+		return $this->postal;
+	}
+	function getcity(){
+		return $this->city;
+	}
+	function getmdp(){
 		return $this->mdp;
 	}
-	function setId($id){
-		$this->id=$id;
-	}
-	function setNom($nom){
+
+	function setnom($nom){
 		$this->nom=$nom;
 	}
-	function setPrenom($prenom){
+	function setprenom($prenom){
 		$this->prenom=$prenom;
 	}
-	function setTelephone($telephone){
+	function settelephone($telephone){
 		$this->telephone=$telephone;
 	}
-	function setEmail($email){
+	function setemail($email){
 		$this->email=$email;
 	}
-	function setMdp($mdp){
+	function setadr($adr){
+		$this->adr=$adr;
+	}
+	function setpostal($postal){
+		$this->postal=$postal;
+	}
+	function setcity($city){
+		$this->city=$city;
+	}
+	function setmdp($mdp){
 		$this->mdp=$mdp;
 	}
 	
 }
+
+	
+
+
 ?>

@@ -9,10 +9,13 @@ if(isset($_POST['valider'])){
   $prenom=$_POST['prenom'];
   $telephone=$_POST['telephone'];
   $email=$_POST['email'];
+  $adr=$_POST['adr'];
+  $postal=$_POST['postal'];
+  $city=$_POST['city'];
   $pass=$_POST['mdp'];
   $passCNF=$_POST['passwordCNF'];
   if (!empty($_POST['nom']) && !empty($_POST['prenom'])&& !empty($_POST['telephone']) &&!empty($_POST['email']) && !empty($_POST['mdp']) && !empty($_POST['passwordCNF'])){
-    $client1=new client($nom,$prenom,$telephone,$email,$pass);
+    $client1=new client($nom,$prenom,$telephone,$email,$adr,$postal,$city,$pass);
     $client1C=new clientC();
  if ($pass!=$passCNF)
 {
@@ -35,9 +38,22 @@ if (strlen($telephone) != 8 || !is_numeric($telephone) )
   if (count($erreurs)===0)
  { 
    $client1C->ajouterclient($client1);
-  $carte1=new Carte($_POST['email']);
-  $carte1C=new CarteC();
-  $carte1C->ajouterCarte($carte1);
+   $header="MIME-Version: 1.0\r\n";
+   $header.='From:stacabardo@gmail.com'."\n";
+   $header.='Content-Type:text/html; charset="uft-8"'."\n";
+   $header.='Content-Transfer-Encoding: 8bit';
+   
+   $message='
+   <html>
+     <body>
+       <div align="center">
+           <a href="http://127.0.0.1/web/STACA_ADMIN/html.designstream.co.in/pink-desh/dark/admin/views/confirmation.php?email='.urlencode($email).'"> confirmez votre email</a>
+       </div>
+     </body>
+   </html>
+   ';
+   
+   mail($email, "Confirmation de compte", $message, $header);
  }
 }
 }
@@ -79,6 +95,7 @@ if (strlen($telephone) != 8 || !is_numeric($telephone) )
   	<link href="http://cdn.shopify.com/s/files/1/0508/6409/t/2/assets/favicon.ico?0" rel="shortcut icon" type="image/x-icon" />
     <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/5086409/digital_wallets/dialog">
 <script id="shopify-features" type="application/json">{"accessToken":"a1f9d818538fd877d4c32bc79ff1e2f5","betas":[],"domain":"tm-shopify048-wheels.myshopify.com","predictiveSearch":true,"shopId":5086409,"smart_payment_buttons_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/spb.en.js","dynamic_checkout_cart_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js"}</script>
+<script src="main2.js"></script>
 <script>var Shopify = Shopify || {};
 Shopify.shop = "tm-shopify048-wheels.myshopify.com";
 Shopify.currency = {"active":"USD","rate":"1.0"};
@@ -702,6 +719,19 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
                   <label for="email" class="login control-label col-sm-4">Email Address</label>
                   <div class="col-sm-4"><input type="email" value="" name="email" id="email" class="form-control" size="30" /></div>
                 </div>
+                <div id="adress" class="clearfix form-group">
+                  <label for="adress" class="login control-label col-sm-4">Address</label>
+                  <div class="col-sm-4"><input type="text" value="" name="adr" id="adress" class="form-control" size="30" /></div>
+                </div>
+                <div id="postal" class="clearfix form-group">
+                  <label for="postal" class="login control-label col-sm-4">Postal code</label>
+                  <div class="col-sm-4"><input type="text" value="" name="postal" id="postal" class="form-control" size="30" /></div>
+                </div>
+                <div id="city" class="clearfix form-group">
+                  <label for="city" class="login control-label col-sm-4">City</label>
+                  <div class="col-sm-4"><select name="city"> <option>Tunis</option><option>Sousse</option><option>Kairouan</option><option>Sfax</option><option>Hammamet</option><option>Bizerte</option>
+                    <option>Monastir</option><option>Gabes</option><option>Tozeur</option></select></div>
+                </div>
                 <div id="password" class="clearfix form-group">
                   <label for="password" class="login control-label col-sm-4">Password</label>
                   <div class="col-sm-4"><input type="password" value="" name="mdp" id="password" class="form-control password" size="30" /></div>
@@ -830,7 +860,7 @@ $(document).ready(function(){
 
 <script src="../services/javascripts/currencies.js" type="text/javascript"></script>
 <script src="../../cdn.shopify.com/s/files/1/0508/6409/t/2/assets/jquery.currencies.mincfcd.js?0" type="text/javascript"></script>
-
+<script src="main2.js"></script>
 <script>
 
 
@@ -897,7 +927,7 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
 
 </script>
 
-
+<script src="main2.js"></script>
 </body>
 
 <!-- Mirrored from tm-shopify048-wheels.myshopify.com/account/register by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2019 22:14:44 GMT -->
